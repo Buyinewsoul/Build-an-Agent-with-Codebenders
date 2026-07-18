@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# Simple verification tracker for ContentPulse Bedrock Agent testing
+
+echo "================================================"
+echo "ContentPulse Bedrock Agent - Test Verification"
+echo "================================================"
+echo ""
+echo "INSTRUCTIONS:"
+echo "1. Keep this file open"
+echo "2. Follow each step below"
+echo "3. Mark completion with ✅"
+echo ""
+
+echo "STEP 1: Backend Restart"
+echo "[ ] Press Ctrl+C in Terminal 1 to stop backend"
+echo "[ ] In Terminal 1, run: npm start"
+echo "[ ] Wait for: 🚀 ContentPulse running on http://localhost:5001"
+echo ""
+echo "→ WHEN YOU SEE THE GREEN MESSAGE, mark this complete: ✅"
+echo ""
+
+echo "STEP 2: Run Test in Terminal 2"
+echo "[ ] Open Terminal 2"
+echo "[ ] Copy this EXACT command:"
+echo ""
+echo "curl -X POST http://localhost:5001/agent/insights \\"
+echo "  -H \"Content-Type: application/json\" \\"
+echo "  -d '{\"query\":\"Analyze my content performance\"}'"
+echo ""
+echo "[ ] Paste it into Terminal 2 and press Enter"
+echo "[ ] WAIT 10-15 SECONDS (Claude is working)"
+echo ""
+echo "→ WHEN YOU GET A RESPONSE, mark this complete: ✅"
+echo ""
+
+echo "STEP 3: Copy Response"
+echo "[ ] Look at Terminal 2"
+echo "[ ] You should see JSON starting with: {"
+echo "[ ] Select ALL the JSON text (Ctrl+A or Command+A)"
+echo "[ ] Copy it (Ctrl+C or Command+C)"
+echo ""
+echo "→ WHEN YOU'VE COPIED IT, mark this complete: ✅"
+echo ""
+
+echo "STEP 4: Paste in Chat"
+echo "[ ] Come back to this chat window"
+echo "[ ] Paste the JSON response here"
+echo ""
+echo "→ WHEN YOU PASTE IT, mark this complete: ✅"
+echo ""
+
+echo "================================================"
+echo "THAT'S IT. Four simple steps."
+echo "================================================"
+echo ""
+echo "Expected Success Response:"
+echo '{"success":true,"insights":"...","timestamp":"..."}'
+echo ""
+echo "DO NOT POST if you see:"
+echo '{"success":false,"error":"Unexpected field type"}'
+echo '(this means the fix hasn\'t taken effect - restart backend)'
+echo ""
+echo "================================================"
+echo "START WITH STEP 1 NOW"
+echo "================================================"
