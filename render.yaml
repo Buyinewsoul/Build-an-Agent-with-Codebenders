@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: contentpulse-bedrock-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: cd ContentPulse-Bedrock/backend && npm install
+    startCommand: cd ContentPulse-Bedrock/backend && node src/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5001
+      - key: AWS_REGION
+        value: us-east-1
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: CLAUDE_MODEL
+        value: claude-3-5-sonnet-20241022
+      - key: LLAMA_MODEL
+        value: llama3.1-8b-instruct
