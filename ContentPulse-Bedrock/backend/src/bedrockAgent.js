@@ -123,6 +123,11 @@ Remember to maintain context from our conversation and provide personalized reco
     return {
       success: true,
       message: response.trim(),
+    };
+  } catch (error) {
+    console.error('Chat conversation error:', error);
+    return {
+      success: false,
       error: error.message,
     };
   }
