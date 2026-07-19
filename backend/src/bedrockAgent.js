@@ -62,7 +62,7 @@ async function generateInsights(query) {
     topTopics: analyticsSummary.topTopics,
   };
 
-  const systemPrompt = `You are an expert content analytics advisor for ContentPulse. 
+  const systemPrompt = `You are an expert content analytics advisor for ContentPulse.
 Analyze content performance data and provide actionable insights and recommendations.
 Be concise but thorough. Focus on trends, opportunities, and performance drivers.`;
 
@@ -112,7 +112,7 @@ async function generateReport() {
     trendData: last14Days,
   };
 
-  const systemPrompt = `You are an expert content strategist. Create a professional biweekly report 
+  const systemPrompt = `You are an expert content strategist. Create a professional biweekly report
 for content performance. Include key metrics, trend analysis, top performers, and actionable recommendations.
 Format as a structured report with sections.`;
 
@@ -185,7 +185,7 @@ async function chatWithLlama(message, conversationHistory = []) {
     },
   ];
 
-  const systemPrompt = `You are ContentPulse, a helpful content analytics assistant. 
+  const systemPrompt = `You are ContentPulse, a helpful content analytics assistant.
 You help users understand their content performance, find trends, and get recommendations.
 You have access to analytics about 420 articles across topics like AI, Marketing, Finance, etc.
 Keep responses concise and focused. When asked about data, reference the insights available.`;
